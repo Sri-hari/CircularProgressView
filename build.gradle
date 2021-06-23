@@ -1,0 +1,50 @@
+apply plugin: 'com.huawei.ohos.app'
+apply plugin: 'org.sonarqube'
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://mirrors.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:2.4.2.5'
+        classpath 'com.huawei.ohos:decctest:1.0.0.6'
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3"
+    }
+}
+
+apply plugin: 'com.huawei.ohos.app'
+ohos {
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://mirrors.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        jcenter()
+    }
+}
+
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "2"
+    property "sonar.organization", "sri-hari"
+    property "sonar.host.url", "https://sonarcloud.io"
+    property "sonar.sources", "entry,circularprogressview"
+    property "sonar.java.binaries", "entry/build,circularprogressview/build"
+  }
+}
