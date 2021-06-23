@@ -38,11 +38,10 @@ allprojects {
     }
 }
 
-
 sonarqube {
   properties {
-    property "sonar.projectKey", "2"
-    property "sonar.organization", "sri-hari"
+    property "sonar.projectKey", "applibgroup_CircularProgressView"
+    property "sonar.organization", "applibgroup"
     property "sonar.host.url", "https://sonarcloud.io"
     property "sonar.sources", "entry,circularprogressview"
     property "sonar.java.binaries", "entry/build,circularprogressview/build"
