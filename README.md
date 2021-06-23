@@ -1,4 +1,4 @@
-![example workflow](https://github.com/Sri-hari/hmosbuild/actions/workflows/main.yml/badge.svg)
+[![Build](https://github.com/applibgroup/CircularProgressView/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/CircularProgressView/actions/workflows/main.yml)
 ## CircularProgressView
 
 ## Introduction
