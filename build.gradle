@@ -63,5 +63,6 @@ sonarqube {
     property "sonar.host.url", "https://sonarcloud.io"
     property "sonar.sources", "entry,circularprogressview"
     property "sonar.java.binaries", "entry/build,circularprogressview/build"
+    property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle"
   }
 }
