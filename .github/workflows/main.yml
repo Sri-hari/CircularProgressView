@@ -54,7 +54,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with: 
         name: assets-for-download
-        path: build\outputs\hap\debug\phone
+        path: build\outputs\reports\checkstyle
 
   checkstyle:
     name: checkstyle
