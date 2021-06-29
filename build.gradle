@@ -1,5 +1,6 @@
 apply plugin: 'com.huawei.ohos.app'
 apply plugin: 'org.sonarqube'
+apply plugin: 'checkstyle'
 
 buildscript {
     repositories {
@@ -36,6 +37,23 @@ allprojects {
         }
         jcenter()
     }
+    task checkstyle(type: Checkstyle) {
+       showViolations = true
+       configFile file("config/checkstyle/checkstyle.xml")
+  
+       source '**/src/main/java'
+       include '**/*.java'
+       exclude '**/gen/**'
+       exclude '**/R.java'
+       exclude '**/BuildConfig.java'
+  
+       // empty classpath
+       classpath = files()
+	}
+}
+
+checkstyle {
+	toolVersion "8.43"
 }
 
 sonarqube {
