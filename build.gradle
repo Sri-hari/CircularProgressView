@@ -41,7 +41,8 @@ allprojects {
        showViolations = true
        configFile file("config/checkstyle/checkstyle.xml")
   
-       source '**/src/main/java'
+       source 'entry/src/main/java'
+       source 'circularprogressview/src/main/java'
        include '**/*.java'
        exclude '**/gen/**'
        exclude '**/R.java'
