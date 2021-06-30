@@ -253,6 +253,7 @@
       <property name="throwsIndent" value="4"/>
       <property name="lineWrappingIndentation" value="4"/>
       <property name="arrayInitIndent" value="2"/>
+	  <property name="severity" value="warning"/>
     </module>
     <module name="AbbreviationAsWordInName">
       <property name="ignoreFinal" value="false"/>
@@ -277,6 +278,7 @@
                value="COMMA, SEMI, POST_INC, POST_DEC, DOT,
                     LABELED_STAT, METHOD_REF"/>
       <property name="allowLineBreaks" value="true"/>
+	  <property name="severity" value="warning"/>
     </module>
     <module name="ParenPad"> <!--Dont Modify -->
       <property name="tokens"
@@ -320,7 +322,7 @@
     </module>
     <module name="JavadocMethod">
       <property name="accessModifiers" value="public"/>
-      <property name="allowMissingParamTags" value="false"/>
+      <property name="allowMissingParamTags" value="false <!-- modified  -->
       <property name="allowMissingReturnTag" value="true"/>
       <property name="allowedAnnotations" value="Override, Test"/>
       <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF, COMPACT_CTOR_DEF"/>
