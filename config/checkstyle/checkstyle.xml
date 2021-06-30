@@ -6,13 +6,10 @@
 <!--
     Checkstyle configuration that checks the Google coding conventions from Google Java Style
     that can be found at https://google.github.io/styleguide/javaguide.html
-
     Checkstyle is very configurable. Be sure to read the documentation at
     http://checkstyle.org (or in your downloaded distribution).
-
     To completely disable a check, just comment it out or delete it from the file.
     To suppress certain violations please review suppression filters.
-
     Authors: Max Vetrenko, Ruslan Diachenko, Roman Ivanov.
  -->
 
@@ -253,7 +250,6 @@
       <property name="throwsIndent" value="4"/>
       <property name="lineWrappingIndentation" value="4"/>
       <property name="arrayInitIndent" value="2"/>
-	  <property name="severity" value="warning"/>
     </module>
     <module name="AbbreviationAsWordInName">
       <property name="ignoreFinal" value="false"/>
@@ -278,7 +274,6 @@
                value="COMMA, SEMI, POST_INC, POST_DEC, DOT,
                     LABELED_STAT, METHOD_REF"/>
       <property name="allowLineBreaks" value="true"/>
-	  <property name="severity" value="warning"/>
     </module>
     <module name="ParenPad"> <!--Dont Modify -->
       <property name="tokens"
@@ -322,7 +317,7 @@
     </module>
     <module name="JavadocMethod">
       <property name="accessModifiers" value="public"/>
-      <property name="allowMissingParamTags" value="false/>
+      <property name="allowMissingParamTags" value="false"/>
       <property name="allowMissingReturnTag" value="true"/>
       <property name="allowedAnnotations" value="Override, Test"/>
       <property name="tokens" value="METHOD_DEF, CTOR_DEF, ANNOTATION_FIELD_DEF, COMPACT_CTOR_DEF"/>
