@@ -1,57 +1,14 @@
-# This workflow will build a Harmony OS project with Gradle and analyse the code using Sonar cloud.
-
-name: Build
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
 jobs:
-  Hmos_Build:
-
+  hello_world_job:
     runs-on: windows-latest
-
+    name: A job to say hello
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
-    - name: set environment variables
-      uses: allenevans/set-env@v2.0.0
-      with:
-          OHOS_SDK_HOME: '${{ github.workspace }}\huawei'
-           
-    - name: Download HMOS SDK
-      uses: actions/checkout@main
-      with:
-        repository: applibgroup/HarmonyOsSdk
-        path: huawei
-    - name: Cache SonarCloud packages
-      uses: actions/cache@v1
-      with:
-        path: ~/.sonar/cache
-        key: ${{ runner.os }}-sonar
-        restore-keys: ${{ runner.os }}-sonar
-    - name: Cache Gradle packages
-      uses: actions/cache@v1
-      with:
-        path: ~/.gradle/caches
-        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
-        restore-keys: ${{ runner.os }}-gradle
-    - name: Hmos Build and analyze code
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: ./gradlew assembleDebug checkstyle sonarqube --info
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2
-      with: 
-        name: assets-for-download
-        path: build\reports\checkstyle
+      - uses: actions/checkout@v2
+      - id: foo
+        uses: applibgroup/HarmonyOsSdk@test
+        with:
+          who-to-greet: 'HMOS '
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
+        shell: cmd
