@@ -12,8 +12,9 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - id: main
-        uses: applibgroup/HarmonyOsSdk@test1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        uses: applibgroup/HarmonyOsSdk@test2
         with:
-          who-to-greet: 'HMOS '
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: cmd
+          who-to-greet: 'HMOS'
