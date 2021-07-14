@@ -16,5 +16,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         uses: applibgroup/HarmonyOsSdk@test7
-        with:
-          who-to-greet: 'HMOS'
