@@ -7,7 +7,7 @@ This CircularProgressView is a (surprisingly) circular progress bar openharmony 
 
 ## Usage Instructions
 
-### Indeterminate:
+### Indeterminate :
 progress view starts & never stops, keeps rotating
 
 add the view to your layout:
