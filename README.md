@@ -1,6 +1,6 @@
 [![Build](https://github.com/applibgroup/CircularProgressView/actions/workflows/main.yml/badge.svg)](https://github.com/applibgroup/CircularProgressView/actions/workflows/main.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=applibgroup_CircularProgressView&metric=alert_status)](https://sonarcloud.io/dashboard?id=applibgroup_CircularProgressView)
-## CircularProgressView _MR
+## CircularProgressView
 
 ## Introduction
 This CircularProgressView is a (surprisingly) circular progress bar openharmony View that is designed to imitate the Material versions of ProgressBar. These versions can be seen on this page of the Material design spec under Circular indicators.
